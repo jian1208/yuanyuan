@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<script>
+	/*var x,y,max;
+	x = Math.random();
+	y = Math.random();
+	max = x>y?x:y;
+	document.write("X=");document.write(x);
+	document.write("<BR>");
+	document.write("Y=");document.write(y);
+	document.write("<BR>");
+	document.write("最大值是:");document.write(max);*/
+
+
+	/*function aa(n){
+		if(n == 1){
+			result = 1;
+		}else{
+			result = n*aa(n-1);
+		}
+		return result;
+	}
+	console.log(aa(10));*/
+
+	/*for(var i=0;i<5;i++){
+		for(var j=0;j<=i;j++){
+			document.write(j+1+'&nbsp')
+		}
+		document.write('<br>')
+	}*/
+
+
+	/*for(var i=1000; i<10000; i++){
+		var four = Math.floor(i/1000);
+		var three = Math.floor(i/100);
+		var two = Math.floor(i%100/10);
+
+		if(i%13 == 0;four == three+two;){
+			console.log(i)
+		}
+		
+	}*/
+
+
+	function pr(n){
+		if(n == 2){
+			return true;
+		}
+		for(var i = 2; i<n; i++){
+			if(n%i == 0){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	var num = 0;
+	for(var i=100; i<=1000; i++){
+		if(pr(i)){
+
+		}
+	}
+
+	</script>
+
+</body>
+</html>

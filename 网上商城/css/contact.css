@@ -1,0 +1,97 @@
+#content{
+	padding-top: 88px;
+	overflow: hidden;
+}
+#title{
+	font-size: 30px;
+	color: #7c7c7c;
+	font-weight: bold;
+	line-height: 30px;
+	margin: 15px 0;
+}
+.contact{
+	width: 960px;
+	height: 237px;
+}
+.contact-ipt{
+	width: 554px;
+	float: left;
+}
+.contact-ipt input{
+	width: 258px;
+	height: 30px;
+	border: 1px solid #efefef;
+	outline: none;
+	padding: 0 6px;
+	margin-right: 1px;
+}
+.contact-ipt textarea{
+	width: 551px;
+	height: 110px;
+	border: 1px solid #efefef;
+	margin-top: 10px;
+	outline: none;
+}
+.message{
+	width: 145px;
+	height: 32px;
+	background: #e5412d;
+	border: 1px solid #e5412d;
+	margin-top: 10px;
+}
+.message span{
+	width: 23px;
+	height: 30px;
+	line-height: 30px;
+	color: rgba(255,255,255,0.4);
+	text-align: center;
+	padding: 0 5px;
+	font-size: 16px;
+	
+}
+.message p{
+	display: inline-block;
+	color: #fff;
+	width: 112px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	float: right;
+	text-align: center;
+	
+}
+.contact-info{
+	width: 391px;
+	height: 237px;
+	background: #424242;
+	color: #fff;
+	float: right;
+}
+.into-title{
+	cursor: help;
+}
+#title-box{
+	font-size: 15px;
+	color: #7c7c7c;
+	font-weight: bold;
+	line-height: 25px;
+	margin: 15px 0;
+}
+.foot{
+	width: 928px;
+	height: 60px;
+	padding: 15px;
+	background: #f4f4f4;
+	border: 1px solid #efefef;
+	margin-bottom: 20px;
+}
+.foot p{
+	display: inline-block;
+	width: 928px;
+	height: 60px;
+	color: #7c7c7c;
+}
+.foot a{
+	color: #e5412d;
+}

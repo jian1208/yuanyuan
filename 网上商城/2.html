@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function star(n){
+			for(var i=0;i<n;i++){
+				for(var j=0; j<n-i;j++){
+					document.write('&nbsp;');
+				}
+				for(var x=0; x<=i;x++){
+					document.write('*&nbsp;');
+				}
+				document.write('<br>');
+			}
+		}
+
+		star(6);
+			/*function fib(n){
+				if(n == 1 || n==2){
+					return 1;
+				}
+				return fib(n-1)+fib(n-2);
+				
+			}*/
+
+			/*function fib(n){
+				if(n == 1 || n == 2){
+					return 1;
+				}
+				var f1 = 1,f2 = 1;
+				var x;
+
+				for(var i=3; i<=n;i++){
+					x = f1+f2;
+					f1 = f2;
+					f2 = x;
+				}
+				return f2;
+				
+			}
+				 document.write(fib(10));*/
+
+
+
+
+
+
+
+				/*function play(){
+				 	var x =Math.floor(Math.random()*9)+1;
+				 	var y =Math.floor(Math.random()*9)+1;
+				 	var z =Math.floor(Math.random()*9)+1;
+				 	var win;
+				 	var str;
+
+
+				 	if(x ==8 ||y ==8|| z ==8){
+				 	win='你赢了';
+				 }else{
+				 	win='你输了';
+				 }
+				 	return x+","+y+","+z+",\n"+win;
+				 }
+				 	var result = confirm(play());
+				 	while(result){
+				 		result = confirm(play())
+				 	}*/
+
+				 	/*var x,y,max;
+				 	x=Math.random();
+				 	y=Math.random();
+
+				 	max = x>y?x:y;
+				 	document.write("X=");document.write(x);
+				 	document.write("<br>")
+				 	document.write("Y=");document.write(y);
+				 	document.write("Max=");document.write(max);*/
+
+
+				 	//var today = new Date();
+
+				 	//var year = today.getFullYear();
+				 	//if(year%4 == 0 && year%100 != 0 || year%400 == 0){
+				 		//document.write(year+"是闰年");
+				 	//}else{
+				 		//document.write(year+"不是闰年");
+				 	//}
+
+
+				 	/*function merge(s1,s2){
+				 		var maxLength = s1.length>s2.lenth?s1.length:s2.length;
+				 		var sum = "";
+				 		for(var i=0;i<maxLength;i++){
+				 			sum+=s1.charAt(i);
+				 			sum+=s2.charAt(i);
+				 		}
+				 		return sum;
+				 	}
+				 	console.log(merge("12fd","egefhggjh"));*/
+
+
+
+				 	function dayOfYear(d){
+				 		var year = d.getFullYear();
+				 		var month = d.getMonth();
+				 		var day = d.getDate();
+				 		var sum = 0;
+				 		if(isLeapYear(year)){
+				 			month[1] = 29;
+				 		}
+				 		for(i=0;i<month;i++){
+				 			sum += month[i];
+				 		}
+				 		
+				 		sum += day;
+				 		return sum;
+				 	}
+				 	function isLeapYear(year){
+				 		if(year%4 == 0 && year%100 !=0 || year%400 ==0){
+				 			return true;
+				 		}
+				 		return false;
+				 	}
+				 	console.log("sum");
+
+
+
+
+
+
+	</script>
+
+
+
+
+</body>
+</html>

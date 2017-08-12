@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			border: 0;
+		}
+		#small-pic{
+			width: 400px;
+			height: 300px;
+			position: relative;
+			float: left;
+			margin-right: 10px;
+		}
+		#small-pic img{
+			width: 100%;
+			height: 100%;		
+		}
+		#drag{
+			width: 40px;
+			height: 30px;
+			background: #ccc;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+		}
+		#big-pic{
+			width: 400px;
+			height: 300px;
+			float: left;
+			overflow: hidden;
+			display: none;
+			position: relative;
+		}
+		#mask{
+			width: 400px;
+			height: 300px;
+			background: #f00;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#big-img{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="small-pic">
+		<div id="mask"></div>
+		<div id="drag"></div>
+		<img src="img/2.jpg.jpg" alt="">
+	</div>
+	<div id="big-pic">
+		<img src="img/2.jpg.jpg" alt="" id="big-img">
+	</div>
+
+	<script>
+		var oSmallPic = document.getElementById('small-pic');
+		var oMask = document.getElementById('mask');
+		var oDrag = document.getElementById('drag');
+		var oBigPic = document.getElementById('big-pic');
+		var oBigImg = document.getElementById('big-img');
+		oMask.onmouseover = function(){
+			oDrag.style.display = 'block';
+			oBigPic.style.display = 'block';
+		};
+		oMask.onmouseout = function(){
+			oDrag.style.display = 'none';
+			oBigPic.style.display = 'none';
+		};
+		oMask.onmousemove = function(e){
+			e = e || event;
+			var left = e.clientX - oDrag.offsetWidth/2;
+			var top = e.clientY - oDrag.offsetHeight/2;
+			if(left <0){
+				left = 0;
+			}
+			if(left > oSmallPic.offsetWidth - oDrag.offsetWidth){
+				left = oSmallPic.offsetWidth - oDrag.offsetWidth;
+			}
+			if(top < 0){
+				top = 0;
+			}
+			if(top > oSmallPic.offsetHight - oDrag.offsetHeight){
+				top = oSmallPic.offsetHight - oDrag.offsetHeight;
+			}
+			oDrag.style.left = left + 'px';
+			oDrag.style.top = top + 'px';
+
+			var scaleX = left / (oSmallPic.offsetWidth - oDrag.offsetWidth);
+			var scaleY = top / (oSmallPic.offsetHeight - oDrag.offsetHeight);
+			oBigImg.style.left = -scaleX * (oBigImg.offsetWidth - oBigPic.offsetWidth) + 'px';
+			oBigImg.style.top = -scaleY * (oBigImg.offsetHeight - oBigPic.offsetHeight) + 'px';
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function change(idx){
+			for(var j=0;j<aBtns.length;j++){
+				aBtns[j].className = "";
+			}
+			oImgBox.style.left = -aItem[0].offsetwidth + idx +"px";
+			aBtns[idx].className = "selected";
+		}
+		oCarousel.onmouseover = function(){
+			clearInterval(timer);
+		}
+		oCarousel.onmouseover = function(){
+			run();
+		}
+		function run(){
+			timer = setInterval(function){
+				iNow++;
+				if(iNow == aBtns.length){
+					iNow = 0;
+				}
+				change(iNow);
+			},2000);
+		}
+		run();
+	</script>
+</body>
+</html>
